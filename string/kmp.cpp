@@ -3,7 +3,7 @@ using namespace std;
 
 string TARGET, ORIGIN;
 
-vector<int> get_partial_match(string S){
+vector<int> get_partial_match2(string S){
 	int L = S.size();
 	vector<int> pi(L, 0);
 
@@ -25,7 +25,7 @@ vector<int> get_partial_match(string S){
 	return pi;
 }
 
-vector<int> get_partial_match2(string S){
+vector<int> get_partial_match1(string S){
 	int L = S.size();
 	vector<int> pi(L, 0);
 
@@ -45,7 +45,7 @@ vector<int> get_partial_match2(string S){
 }
 
 vector<int> kmp_search(string origin, string target){
-	vector<int> pi = get_partial_match(origin);
+	vector<int> pi = get_partial_match(target);
 	vector<int> Ans;
 
 	int matched = 0;
