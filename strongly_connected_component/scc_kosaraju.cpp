@@ -26,7 +26,7 @@ void dfs(int node){
 		}
 	}
 
-	DFS_TREE.push(child);
+	DFS_TREE.push(node);
 
 	return;
 }
@@ -50,7 +50,7 @@ void make_scc(void){
 	}
 
 	int scc_num = 0;
-	while(DFS_TREE.empty()){
+	while(!DFS_TREE.empty()){
 		int node = DFS_TREE.top(); DFS_TREE.pop();
 
 		if(RVISIT[node]){
